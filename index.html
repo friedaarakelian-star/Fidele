@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fidèle – Vos clients n’ont pas disparu, ils ont oublié</title>
+<meta name="description" content="Fidèle envoie un rappel au bon moment pour faire revenir vos clients. 29 €/mois, sans engagement, satisfait ou remboursé 14 jours.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fidèle – Vos clients n’ont pas disparu, ils ont oublié">
+<meta property="og:description" content="Le rappel automatique qui fait revenir vos clients. 29 €/mois, sans engagement.">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#12233F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12233F;--sun:#F5C518;--paper:#F4F5F0;--line:#D9DCD3;--mute:#4A5568;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);font-size:18px;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+header{padding:18px 0}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.02em;text-decoration:none}
+.logo i{display:inline-block;width:.55em;height:.55em;background:var(--sun);border-radius:50%;margin-left:3px}
+h1{font-weight:800;font-size:clamp(38px,11vw,64px);line-height:1;letter-spacing:-.035em;margin:14px 0 18px}
+h2{font-weight:800;font-size:clamp(26px,7vw,36px);line-height:1.1;letter-spacing:-.025em;margin-bottom:16px}
+.lead{font-size:20px;color:var(--mute);max-width:34ch}
+section{padding:44px 0;border-top:1px solid var(--line)}
+.calc{background:var(--ink);color:#fff;border-radius:var(--r);padding:22px;margin:28px 0 20px}
+.calc label{display:flex;justify-content:space-between;font-weight:600;margin-top:14px}
+.calc label:first-child{margin-top:0}
+.calc output{color:var(--sun);font-weight:800}
+.calc input[type=range]{width:100%;height:44px;accent-color:var(--sun)}
+.res{border-top:1px solid #ffffff33;margin-top:10px;padding-top:16px}
+.big{font-size:clamp(36px,10vw,52px);font-weight:800;line-height:1;color:var(--sun);letter-spacing:-.03em}
+.res p{margin-top:8px;font-size:17px}
+.res small{display:block;margin-top:10px;opacity:.7;font-size:14px}
+.btn{display:block;text-align:center;background:var(--sun);color:var(--ink);font-weight:800;font-size:20px;text-decoration:none;padding:18px 20px;border-radius:var(--r);min-height:56px}
+.btn:hover{filter:brightness(.95)}
+.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.note{font-size:15px;color:var(--mute);text-align:center;margin-top:10px}
+.benef{list-style:none;padding:0;display:grid;gap:22px}
+.benef b{display:block;font-size:21px;letter-spacing:-.01em}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:18px}
+.steps li{counter-increment:s;padding-left:46px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--sun);font-weight:800;display:grid;place-items:center}
+.offer{background:#fff;border:2px solid var(--ink);border-radius:var(--r);padding:24px}
+.price{font-size:clamp(48px,14vw,72px);font-weight:800;letter-spacing:-.04em;line-height:1}
+.price span{font-size:22px;font-weight:600;letter-spacing:0}
+.perday{color:var(--mute);margin:6px 0 18px}
+.offer ul{padding-left:20px;margin:0 0 20px;display:grid;gap:8px}
+.guar{background:var(--paper);border-radius:10px;padding:14px 16px;margin-bottom:20px;font-size:16px}
+details{border-bottom:1px solid var(--line)}
+summary{font-weight:600;padding:16px 0;cursor:pointer;min-height:44px}
+details p{padding-bottom:16px;color:var(--mute)}
+footer{padding:30px 0 50px;font-size:15px;color:var(--mute);border-top:1px solid var(--line)}
+footer a{margin-right:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="/">Fidèle<i></i></a></div></header>
+
+<main>
+<div class="wrap">
+  <h1>Vos clients n’ont pas disparu. Ils ont oublié.</h1>
+  <p class="lead">Fidèle leur envoie un rappel au bon moment, avec une offre de retour. Vous n’avez rien à faire.</p>
+
+  <div class="calc" aria-label="Calculez ce que vous perdez">
+    <label for="n">Clients qui ne reviennent pas, par mois <output id="nv">20</output></label>
+    <input id="n" type="range" min="5" max="100" step="5" value="20">
+    <label for="p">Dépense moyenne par visite <output id="pv">40 €</output></label>
+    <input id="p" type="range" min="10" max="150" step="5" value="40">
+    <div class="res">
+      <div class="big" id="loss">800 €</div>
+      <p>laissés de côté chaque mois. Si Fidèle ramène seulement <b id="back">4</b> de ces clients, vous récupérez <b id="gain">160 €</b>, pour un abonnement de 29 €.</p>
+      <small>Exemple de calcul avec vos chiffres, pas une promesse de résultat.</small>
+    </div>
+  </div>
+
+  <a class="btn" href="https://buy.stripe.com/REMPLACER_PAR_VOTRE_LIEN">Activer Fidèle – 29 €/mois</a>
+  <p class="note">Sans engagement, résiliable à tout moment. Satisfait ou remboursé 14 jours.</p>
+</div>
+
+<section><div class="wrap">
+  <h2>Un client satisfait ne revient pas tout seul</h2>
+  <ul class="benef">
+    <li><b>Il ne revient pas par oubli, pas par déception.</b>Personne ne tient de fichier, personne ne relance. Fidèle le fait à votre place.</li>
+    <li><b>Le rappel part au bon moment.</b>Après le délai naturel de votre prestation, ni trop tôt, ni trop tard.</li>
+    <li><b>Vous voyez ce que ça rapporte.</b>Un compteur indique les clients revenus et le chiffre généré par les rappels.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Comment ça marche</h2>
+  <ol class="steps">
+    <li><b>Vous récupérez un contact à l’encaissement.</b> Un numéro ou un email, avec l’accord du client.</li>
+    <li><b>Fidèle écrit au client le moment venu.</b> Un message court, à votre nom.</li>
+    <li><b>Le client revient avec une offre à usage unique.</b> Vous suivez les retours dans le compteur.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Une seule formule</h2>
+  <div class="offer">
+    <div class="price">29 €<span> / mois</span></div>
+    <p class="perday">Soit moins d’1 € par jour.</p>
+    <ul>
+      <li>Rappels automatiques pour tous vos clients</li>
+      <li>Offre de retour à usage unique</li>
+      <li>Compteur des clients revenus et du chiffre généré</li>
+      <li>Mise en place faite avec vous sous 48 h après paiement</li>
+    </ul>
+    <div class="guar"><b>Satisfait ou remboursé, 14 jours.</b> Écrivez-nous par email dans les 14 jours suivant le paiement, nous vous remboursons sous 5 jours ouvrés, sans justification.</div>
+    <a class="btn" href="https://buy.stripe.com/REMPLACER_PAR_VOTRE_LIEN">Activer Fidèle – 29 €/mois</a>
+    <p class="note">Sans engagement, résiliable à tout moment. Paiement sécurisé par Stripe.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Questions fréquentes</h2>
+  <details><summary>Est-ce que ça marche pour mon commerce ?</summary><p>Fidèle convient aux commerces et services dont les clients reviennent à intervalle régulier : coiffure, barbier, institut de beauté. Si vous avez un doute sur votre activité, écrivez-nous avant de payer.</p></details>
+  <details><summary>Combien de temps ça me prend ?</summary><p>La mise en place se fait avec vous en une fois, puis les rappels partent seuls. Au quotidien, il suffit de noter le contact du client à l’encaissement.</p></details>
+  <details><summary>Que se passe-t-il si je veux arrêter ?</summary><p>Vous résiliez quand vous voulez, sans préavis ni frais. Dans les 14 premiers jours, vous êtes en plus remboursé.</p></details>
+  <details><summary>À quoi sert exactement ce que je paie ?</summary><p>À l’envoi des rappels à vos clients, à l’offre de retour et au suivi de ce qu’ils vous rapportent. Vous ne payez rien d’autre.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <a href="/legal.html#mentions">Mentions légales</a><a href="/legal.html#cgv">CGV</a><a href="/legal.html#confidentialite">Confidentialité</a>
+</div></footer>
+
+<script>
+(function(){
+  var n=document.getElementById('n'),p=document.getElementById('p');
+  function f(x){return x.toLocaleString('fr-FR')+' €'}
+  function calc(){
+    var a=+n.value,b=+p.value,back=Math.max(1,Math.round(a/5));
+    document.getElementById('nv').textContent=a;
+    document.getElementById('pv').textContent=f(b);
+    document.getElementById('loss').textContent=f(a*b);
+    document.getElementById('back').textContent=back;
+    document.getElementById('gain').textContent=f(back*b);
+  }
+  n.addEventListener('input',calc);p.addEventListener('input',calc);calc();
+})();
+</script>
+</body>
+</html>
